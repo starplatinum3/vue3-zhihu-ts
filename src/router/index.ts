@@ -14,7 +14,26 @@ const routes: Array<RouteRecordRaw> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+  },
+  {
+    path: '/zhihu',
+    name: 'zhihu',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/zhihu/index.vue')
+  },
+  {
+    path: '/MeZhihuNamed',
+    name: 'MeZhihuNamed',
+    component: () => import('../views/MeZhihuNamed.vue')
+  },
+
+  // {
+  //   path: '/github',
+  //   name: 'github',
+  //   component: () => import(/* webpackChunkName: "about" */ '../views/GitHub.vue')
+  // }
 ]
 
 const router = createRouter({
