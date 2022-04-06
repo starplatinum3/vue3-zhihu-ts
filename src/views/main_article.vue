@@ -97,7 +97,7 @@
             </div>
         </div>
 
-        <JuejinComment v-show="showingCmt"></JuejinComment>
+        <JuejinComment class="cmt" v-show="showingCmt"></JuejinComment>
     </div>
 </template>
 
@@ -138,6 +138,9 @@
 
 <style scoped lang="css">
 
+    .cmt{
+        position: absolute;
+    }
     .split-line {
         /*background: #ff6f2b;*/
         height: 1px;
