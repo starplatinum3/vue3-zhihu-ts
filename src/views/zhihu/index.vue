@@ -12,6 +12,7 @@
 <!--        <van-tab title="MeZhihuSt"><MeZhihuSt></MeZhihuSt></van-tab>-->
 <!--        <van-tab title="MeZhihuSt"><MeZhihuSt></MeZhihuSt></van-tab>-->
         <van-tab title="MeZhihuNamed"><MeZhihuNamed></MeZhihuNamed></van-tab>
+          <van-tab title="main_article"><main_article></main_article></van-tab>
     </van-tabs>
 <!--    https://blog.csdn.net/u013611978/article/details/119598842-->
 
@@ -92,6 +93,8 @@
     import MeZhihu2 from "@/views/MeZhihu2.vue"
     import MeZhihuSt from "@/views/MeZhihuSt.vue"
     import MeZhihuNamed from "@/views/MeZhihuNamed.vue"
+     import main_article from "@/views/main_article.vue"
+    
     // import Video from "@/views/Video.vue"
 
     export default defineComponent({
@@ -108,6 +111,7 @@
             // MeZhihuSt,
             MeZhihuNamed,
             // Video
+            main_article
         },
 
         setup() {
