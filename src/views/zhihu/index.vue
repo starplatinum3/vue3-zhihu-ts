@@ -2,10 +2,11 @@
 
     <van-tabs v-model:active="active">
 <!--        <van-tab title="视频"><Video></Video></van-tab>-->
+        <van-tab title="视频"><MyVideo></MyVideo></van-tab>
         <van-tab title="推荐"><Home></Home></van-tab>
-
+        <van-tab title="热榜"><HotList></HotList></van-tab>
         <van-tab title="首页"><ShouYe></ShouYe></van-tab>
-        <van-tab title="HotList"><HotList></HotList></van-tab>
+
         <van-tab title="me"><Me></Me></van-tab>
 <!--        <van-tab title="mezhi"><MeZhihu></MeZhihu></van-tab>-->
 <!--        <van-tab title="mezhi2"><MeZhihu2></MeZhihu2></van-tab>-->
@@ -15,6 +16,7 @@
           <van-tab title="main_article"><main_article></main_article></van-tab>
         <van-tab title="JuejinComment"><JuejinComment></JuejinComment></van-tab>
         <van-tab title="CustomPopupTest"><CustomPopupTest></CustomPopupTest></van-tab>
+
     </van-tabs>
 <!--    https://blog.csdn.net/u013611978/article/details/119598842-->
 
@@ -97,6 +99,7 @@
     import MeZhihuNamed from "@/views/MeZhihuNamed.vue"
      import main_article from "@/views/main_article.vue"
      import CustomPopupTest from "@/views/CustomPopupTest.vue"
+     import MyVideo from "@/views/MyVideo.vue"
      import JuejinComment from "@/components/JuejinComment.vue"
 
     // import Video from "@/views/Video.vue"
@@ -117,11 +120,14 @@
             MeZhihuNamed,
             // Video
             main_article,
-            JuejinComment
+            JuejinComment,
+            MyVideo
         },
 
         setup() {
-            const active = ref(0);
+            // const active = ref(0);
+            // const active = ref(2);
+            const active = ref(1);
             const value = ref('');
             return {value,
                 active};

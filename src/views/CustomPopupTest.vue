@@ -23,7 +23,7 @@
             };
         },
         components:{
-            HelloWorld
+            // HelloWorld
         },
         methods: {
             showCustom() {

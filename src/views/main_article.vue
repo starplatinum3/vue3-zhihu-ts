@@ -97,7 +97,18 @@
             </div>
         </div>
 
-        <JuejinComment class="cmt" v-show="showingCmt"></JuejinComment>
+        <!--        v-show="showingCmt"-->
+        <!--        <CustomPopup>-->
+        <!--            <JuejinComment  v-slot:PoperContent class="cmt" ></JuejinComment>-->
+        <!--        </CustomPopup>-->
+
+        <!-- 弹出层 -->
+        <div :class="{'CustomPopup':showCustomPopup}" @click="maskClick"></div>
+        <div class="CustomPopupContent " :class="{'CustomPopupContentShow':showCustomPopup}">
+            <!--            <slot name="PoperContent"></slot>-->
+            <JuejinComment class="cmt"></JuejinComment>
+        </div>
+
     </div>
 </template>
 
@@ -108,29 +119,55 @@
     //     return {};
     //   },
     // };
+    import {reactive, toRefs} from 'vue'
+
     import {ref} from 'vue';
     import {defineComponent} from 'vue';
     import JuejinComment from "@/components/JuejinComment.vue"
+    import CustomPopup from "../components/CustomPopup.vue"
+
     export default defineComponent({
         name: 'HomeView',
         components: {
-            JuejinComment
+            JuejinComment,
+            // CustomPopup
         },
 
         setup() {
-            const onCmtClicked=()=>{
+
+            const state = reactive({
+                msg: 'Hello Vue World!',
+                showCustomPopup: false,
+            })
+
+
+            const onCmtClicked = () => {
                 console.log("onCmtClicked")
-                if(showingCmt.value){
-                    showingCmt.value=false
-                }else{
-                    showingCmt.value=true
-                }
+                // if (showingCmt.value) {
+                //     showingCmt.value = false
+                // } else {
+                //     showingCmt.value = true
+                // }
+                showCustom()
+            }
+
+            const showCustom = () => {
+                // this.showCustomPopup = true;
+                state.showCustomPopup = true;
+            }
+            const maskClick = () => {
+                // this.showCustomPopup = false;
+                state.showCustomPopup = false;
             }
             // showingCmt
             // vue3 ts 变量
             let showingCmt = ref(false);
             return {
-                onCmtClicked,showingCmt
+                ...toRefs(state),
+                onCmtClicked,
+                showingCmt,
+                showCustom,
+                maskClick
             };
         },
     });
@@ -138,9 +175,43 @@
 
 <style scoped lang="css">
 
-    .cmt{
+    .CustomPopup {
+        height: 100%;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .CustomPopupContent {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transition: all 0.3s ease;
+        transform: translateY(100%);
+        z-index: 3000;
+        /*background: #90ff76;*/
+        background: white;
+        /*height: 400px;*/
+        /*height: 100%;*/
+        /*height: 80%;*/
+        /*height: 90%;*/
+        /*height: 95%;*/
+        height: 92%;
+    }
+
+    .CustomPopupContentShow {
+        transform: translateY(0);
+    }
+
+    .cmt {
         position: absolute;
     }
+
     .split-line {
         /*background: #ff6f2b;*/
         height: 1px;
