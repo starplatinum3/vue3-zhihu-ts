@@ -28,7 +28,16 @@ const routes: Array<RouteRecordRaw> = [
     name: 'MeZhihuNamed',
     component: () => import('../views/MeZhihuNamed.vue')
   },
-
+    {
+        path: '/stu-table',
+        name: 'stu-table',
+        component: () => import('../views/stu-table.vue')
+    },
+    {
+        path: '/edu-exp-table',
+        name: 'edu-exp-table',
+        component: () => import('../views/edu-exp-table.vue')
+    },
   // {
   //   path: '/github',
   //   name: 'github',

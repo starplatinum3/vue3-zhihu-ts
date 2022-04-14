@@ -20,6 +20,12 @@ npm run build
 npm run lint
 ```
 
+`slot` attributes are deprecated     
+
+ESLint: 'v-slot' directive must be owned by a custom element, but 'div' is not. (vue/valid-v-slot). ESLint: Named slots must use '&lt;template&gt;' on a custom element. (vue/valid-v-slot). 
+
+v-slot:header 
+
 vant 搜索
 
 .content{

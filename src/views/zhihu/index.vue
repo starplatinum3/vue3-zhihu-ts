@@ -16,6 +16,7 @@
           <van-tab title="main_article"><main_article></main_article></van-tab>
         <van-tab title="JuejinComment"><JuejinComment></JuejinComment></van-tab>
         <van-tab title="CustomPopupTest"><CustomPopupTest></CustomPopupTest></van-tab>
+        <van-tab title="StuTable"><StuTable></StuTable></van-tab>
 
     </van-tabs>
 <!--    https://blog.csdn.net/u013611978/article/details/119598842-->
@@ -100,6 +101,7 @@
      import main_article from "@/views/main_article.vue"
      import CustomPopupTest from "@/views/CustomPopupTest.vue"
      import MyVideo from "@/views/MyVideo.vue"
+     import StuTable from "@/views/stu-table.vue"
      import JuejinComment from "@/components/JuejinComment.vue"
 
     // import Video from "@/views/Video.vue"
@@ -121,7 +123,9 @@
             // Video
             main_article,
             JuejinComment,
-            MyVideo
+            MyVideo,
+            StuTable
+
         },
 
         setup() {
