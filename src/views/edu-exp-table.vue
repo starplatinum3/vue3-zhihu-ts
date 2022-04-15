@@ -1,29 +1,29 @@
 <template>
 
-<!--    <el-form :inline="true" :model="submitData" class="demo-form-inline" :rules="rules" ref="ruleForm">-->
-<!--        <el-card class="box-card">-->
-<!--            <div class="header clearfix">-->
-<!--                <span>stu</span>-->
-<!--                <el-button v-if="!ischeck && !isFind" class="fr" type="primary" @click="validateStu('ruleForm')">提交</el-button>-->
-<!--                <el-button v-else class="fr" type="primary" @click="goBack">返回</el-button>-->
-<!--            </div>-->
-<!--            <el-form-item label="name" prop="name">-->
-<!--                <el-input placeholder="请输入name" v-model="formDataStu.name"></el-input>-->
-<!--            </el-form-item>-->
-<!--            <el-form-item label="stu_num" prop="stuNum">-->
-<!--                <el-input placeholder="请输入stu_num" v-model="formDataStu.stuNum"></el-input>-->
-<!--            </el-form-item>-->
-<!--            <el-form-item label="sex" prop="sex">-->
-<!--                <el-input placeholder="请输入sex" v-model="formDataStu.sex"></el-input>-->
-<!--            </el-form-item>-->
-<!--            <el-form-item label="id_num" prop="idNum">-->
-<!--                <el-input placeholder="请输入id_num" v-model="formDataStu.idNum"></el-input>-->
-<!--            </el-form-item>-->
-<!--            <el-form-item label="email" prop="email">-->
-<!--                <el-input placeholder="请输入email" v-model="formDataStu.email"></el-input>-->
-<!--            </el-form-item>-->
-<!--        </el-card>-->
-<!--    </el-form>-->
+    <el-form :inline="true" :model="submitData" class="demo-form-inline" :rules="rules" ref="ruleForm">
+        <el-card class="box-card">
+            <div class="header clearfix">
+                <span>stu</span>
+                <el-button v-if="!ischeck && !isFind" class="fr" type="primary" @click="validateStu('ruleForm')">提交</el-button>
+                <el-button v-else class="fr" type="primary" @click="goBack">返回</el-button>
+            </div>
+            <el-form-item label="name" prop="name">
+                <el-input placeholder="请输入name" v-model="formDataStu.name"></el-input>
+            </el-form-item>
+            <el-form-item label="stu_num" prop="stuNum">
+                <el-input placeholder="请输入stu_num" v-model="formDataStu.stuNum"></el-input>
+            </el-form-item>
+            <el-form-item label="sex" prop="sex">
+                <el-input placeholder="请输入sex" v-model="formDataStu.sex"></el-input>
+            </el-form-item>
+            <el-form-item label="id_num" prop="idNum">
+                <el-input placeholder="请输入id_num" v-model="formDataStu.idNum"></el-input>
+            </el-form-item>
+            <el-form-item label="email" prop="email">
+                <el-input placeholder="请输入email" v-model="formDataStu.email"></el-input>
+            </el-form-item>
+        </el-card>
+    </el-form>
 
 <!--    学生基本信息-->
     <div class="container">
@@ -285,9 +285,11 @@
             getByStuId(stuId){
                 method.postWithParams("eduExp/getByStuId", {stuId:stuId}, stuId, this)
                     .then(response => {
+                        console.log("response")
+                        console.log(response)
                         let content = response.data.content
                         this.tableData = content
-                        this.pageTotal = response.data.totalElements
+                        // this.pageTotal = response.data.totalElements
                     })
                     .catch( error=> {
                         console.log(error);

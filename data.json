@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": null,
+      "school": "2",
+      "major": "2",
+      "education": "2",
+      "stuId": 2,
+      "gpa": null
+    }
+  ],
+  "status": 200,
+  "statusText": "",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "config": {
+    "transformRequest": {},
+    "transformResponse": {},
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/json;charset=utf-8"
+    },
+    "method": "post",
+    "url": "http://localhost:8081/eduExp/getByStuId",
+    "data": "{\"stuId\":\"2\"}",
+    "params": "2"
+  },
+  "request": {}
+}

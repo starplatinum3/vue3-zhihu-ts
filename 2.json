@@ -1,0 +1,83 @@
+
+[
+  {
+    "id": 2,
+    "name": "2",
+    "stuNum": null,
+    "sex": "男",
+    "idNum": null,
+    "email": "2"
+  },
+  {
+    "id": 3,
+    "name": "3",
+    "stuNum": null,
+    "sex": "女",
+    "idNum": null,
+    "email": "3"
+  },
+  {
+    "id": 12,
+    "name": "5",
+    "stuNum": null,
+    "sex": "女",
+    "idNum": null,
+    "email": "5"
+  },
+  {
+    "id": 13,
+    "name": "6",
+    "stuNum": null,
+    "sex": "男",
+    "idNum": null,
+    "email": "6"
+  },
+  {
+    "id": 14,
+    "name": "starplatinumora",
+    "stuNum": null,
+    "sex": "男的",
+    "idNum": null,
+    "email": "250044131314@qq.com"
+  },
+  {
+    "id": 15,
+    "name": "好人",
+    "stuNum": null,
+    "sex": "男",
+    "idNum": null,
+    "email": "好人@mm.com"
+  },
+  {
+    "id": 16,
+    "name": "好人",
+    "stuNum": null,
+    "sex": "男",
+    "idNum": null,
+    "email": "好人@mm.com"
+  },
+  {
+    "id": 17,
+    "name": "好人",
+    "stuNum": null,
+    "sex": "男",
+    "idNum": null,
+    "email": "好人@mm.com"
+  },
+  {
+    "id": 18,
+    "name": "string",
+    "stuNum": null,
+    "sex": "string",
+    "idNum": null,
+    "email": "string"
+  },
+  {
+    "id": 19,
+    "name": "1",
+    "stuNum": null,
+    "sex": "1",
+    "idNum": null,
+    "email": "1"
+  }
+]
