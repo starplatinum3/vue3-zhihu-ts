@@ -38,6 +38,12 @@ const routes: Array<RouteRecordRaw> = [
         name: 'edu-exp-table',
         component: () => import('../views/edu-exp-table.vue')
     },
+    {
+        path: '/comment-table',
+        name: 'comment-table',
+        component: () => import('../views/comment-table.vue')
+    },
+
   // {
   //   path: '/github',
   //   name: 'github',
