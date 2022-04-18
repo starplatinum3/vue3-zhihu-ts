@@ -14,8 +14,8 @@
                         <!--                 &lt;!&ndash; src 不行 &ndash;&gt;-->
                         <!--                  <img class="avatar-img" src="@/assets/miku.jpg"/>-->
                         <!--             </div>-->
-                        <span class="nickname">昵称</span>
-                        <span class="personal-signature">昵称</span>
+                        <span class="nickname">张扛扛</span>
+                        <span class="personal-signature">有点皮</span>
                     </div>
                     <!--            <img class="avatar-img" src="@/assets/miku.jpg" alt="miku"/>-->
 
@@ -153,9 +153,13 @@
         //  width: 183*2px;
         //  height: 22*2px;
         /*width: 183px;*/
-        width: 123px;
+        // width: 123px;
+        width: 40px;
         height: 22px;
-        margin-left: 30px;
+        // margin-left: 30px;
+          margin-left: 10px;
+        // inline-height:22px;
+        line-height: 200px;
     }
 
     .screen {

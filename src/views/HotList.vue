@@ -2,18 +2,20 @@
 <div class="flex-col page">
     <div class="flex-col">
         <div class="flex-row equal-division">
-            <div class="equal-division-item justify-center">
+            <div class="equal-division-item justify-center carefully-chosen">
                 <div class="left-section"></div>
-                <div class="right-section"></div>
+                <div class="right-section-carefully-chosen">日报精选</div>
             </div>
             <div class="equal-division-item justify-center section_2">
                 <div class="left-section"></div>
-                <div class="right-section"></div>
+                <div class="right-section">进站必看</div>
             </div>
         </div>
         <div class="flex-col group_1">
             <div class="flex-col items-start section_3">
-                <div class="section_4"></div>
+<!--                国务院表示要足量发放-->
+                <div class="new-icon"></div>
+                国务院表示要足量发放
             </div>
 <!--            <div class="flex-col section_5">-->
 <!--                <div class="flex-row group_2">-->
@@ -67,6 +69,19 @@
         width: 4.25rem;
         height: 0.94rem;
     }
+    .carefully-chosen{
+        /*这样写是可以拿到的*/
+        /*background: url("@/assets/air.jpg");*/
+        background:deepskyblue;
+    }
+    .right-section-carefully-chosen {
+        margin-left: 0.69rem;
+        color: #4d46ff;
+        background-color: rgb(105, 27, 27);
+        width: 4.25rem;
+        height: 0.94rem;
+    }
+
     .page {
         padding: 1.5rem 0.88rem 26.94rem;
         background-color: rgb(255, 255, 255);
@@ -99,7 +114,7 @@
         padding: 0 0.44rem 0.44rem;
         background-color: rgb(213, 204, 204);
     }
-    .section_4 {
+    .new-icon {
         margin-left: 0.31rem;
         background-color: rgb(141, 29, 193);
         width: 1.69rem;

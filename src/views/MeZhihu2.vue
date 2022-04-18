@@ -44,7 +44,7 @@
       <div class="flex-col create_center">
         <div class="justify-between group_4">
           <div class="flex-row">
-            <div class="section_4"></div>
+            <div class="new-icon"></div>
             <div class="section_5"></div>
           </div>
           <div class="flex-row">
@@ -179,7 +179,7 @@
     width: 0.063rem;
     height: 0.88rem;
   }
-  .section_4 {
+  .new-icon {
     background-color: rgb(214, 41, 41);
     width: 3.25rem;
     height: 1rem;

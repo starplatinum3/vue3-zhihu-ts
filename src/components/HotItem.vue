@@ -64,7 +64,7 @@
         padding: 0 0.44rem 0.44rem;
         background-color: rgb(213, 204, 204);
     }
-    .section_4 {
+    .new-icon {
         margin-left: 0.31rem;
         background-color: rgb(141, 29, 193);
         width: 1.69rem;

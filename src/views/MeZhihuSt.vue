@@ -34,7 +34,7 @@
         margin-left: 0.31rem;
         margin-right: 0.13rem;
     }
-    .section_4 {
+    .new-icon {
         margin-left: 0.19rem;
         margin-top: 0.88rem;
     }

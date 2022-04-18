@@ -1,40 +1,66 @@
 <template>
-<div class="home-bg">
 
-<!--    <van-tabs v-model:active="active">-->
-<!--        <van-tab title="标签 1">内容 1</van-tab>-->
-<!--        <van-tab title="标签 2">内容 2</van-tab>-->
-<!--        <van-tab title="标签 3">内容 3</van-tab>-->
-<!--        <van-tab title="标签 4">内容 4</van-tab>-->
-<!--    </van-tabs>-->
+<!--    homeBox-->
+<!--    homeBoxhomeBox-->
+<!--    homeBox-->
+<!--    homeBoxhomeBox-->
+<!--    vv-->
+
+<!--    homeBox-->
+<!--    homeBoxhomeBox-->
+<!--    homeBox-->
+<!--    homeBoxhomeBox-->
+<!--    vv-->
 
 
-    <div class="item-box">
-        <van-search v-model="value" placeholder="请输入搜索关键词"/>
 
-        <HotBox></HotBox>
-        <!--    <div class="hot-box"></div>-->
-        <div class="watch-upgrade">
-            <div class="watch-tip">您关注的[游戏]话题有更新</div>
-            <van-button round plain class="look-btn" type="primary">去看看</van-button>
-            <div class="cross-btn">x</div>
-        </div>
-    </div>
-    <div class="item-box one-card">
-        <ZhihuCard class="one-card"></ZhihuCard>
-    </div>
+    <van-tabs v-model:active="active">
+<!--        <van-tab title="视频"><Video></Video></van-tab>-->
+        <van-tab title="全站"><Home></Home></van-tab>
+        <van-tab title="视频"><MyVideo></MyVideo></van-tab>
 
- <div class="item-box one-card">
-        <ZhihuCard class="one-card"></ZhihuCard>
-    </div>
-    <!--    https://youzan.github.io/vant/#/zh-CN/tabbar-->
+        <van-tab title="热榜"><HotList></HotList></van-tab>
+        <van-tab title="首页"><ShouYe></ShouYe></van-tab>
 
-    <van-tabbar v-model="active">
-        <van-tabbar-item icon="home-o">标签</van-tabbar-item>
-        <van-tabbar-item icon="search">标签</van-tabbar-item>
-        <van-tabbar-item icon="friends-o">标签</van-tabbar-item>
-        <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
-    </van-tabbar>
+        <van-tab title="me"><Me></Me></van-tab>
+<!--        <van-tab title="mezhi"><MeZhihu></MeZhihu></van-tab>-->
+<!--        <van-tab title="mezhi2"><MeZhihu2></MeZhihu2></van-tab>-->
+<!--        <van-tab title="MeZhihuSt"><MeZhihuSt></MeZhihuSt></van-tab>-->
+<!--        <van-tab title="MeZhihuSt"><MeZhihuSt></MeZhihuSt></van-tab>-->
+        <van-tab title="MeZhihuNamed"><MeZhihuNamed></MeZhihuNamed></van-tab>
+          <van-tab title="main_article"><main_article></main_article></van-tab>
+        <van-tab title="JuejinComment"><JuejinComment></JuejinComment></van-tab>
+        <van-tab title="CustomPopupTest"><CustomPopupTest></CustomPopupTest></van-tab>
+        <van-tab title="StuTable"><StuTable></StuTable></van-tab>
+        <van-tab title="ArticleTable"><ArticleTable></ArticleTable></van-tab>
+          <van-tab title="VantStyle"><VantStyle></VantStyle></van-tab>
+
+    </van-tabs>
+<!--    https://blog.csdn.net/u013611978/article/details/119598842-->
+
+<!--    <div class="item-box">-->
+<!--        <van-search v-model="value" placeholder="请输入搜索关键词"/>-->
+
+<!--        <HotBox></HotBox>-->
+<!--        &lt;!&ndash;    <div class="hot-box"></div>&ndash;&gt;-->
+<!--        <div class="watch-upgrade">-->
+<!--            <div class="watch-tip">有更新</div>-->
+<!--            <van-button round plain class="look-btn" type="primary">去看看</van-button>-->
+<!--            <div>x</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="item-box">-->
+<!--        <ZhihuCard></ZhihuCard>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash;    https://youzan.github.io/vant/#/zh-CN/tabbar&ndash;&gt;-->
+
+<!--    <van-tabbar v-model="active">-->
+<!--        <van-tabbar-item icon="home-o">标签</van-tabbar-item>-->
+<!--        <van-tabbar-item icon="search">标签</van-tabbar-item>-->
+<!--        <van-tabbar-item icon="friends-o">标签</van-tabbar-item>-->
+<!--        <van-tabbar-item icon="setting-o">标签</van-tabbar-item>-->
+<!--    </van-tabbar>-->
 
 
     <!--    <div class="screen">-->
@@ -71,7 +97,6 @@
     <!--        </div>-->
 
     <!--    </div>-->
-    </div>
 </template>
 <!--setup-->
 <!--ts 不行啊-->
@@ -80,18 +105,55 @@
 
     import {defineComponent} from 'vue';
 
-    import ZhihuCard from "@/components/zhihu-card/index.vue"
-    import HotBox from "@/components/hot-box/index.vue"
+    // import ZhihuCard from "@/components/zhihu-card/index.vue"
+    // import HotBox from "@/components/hot-box/index.vue"
+    import Home from "@/components/Home.vue"
+    import ShouYe from "@/views/shouye.vue"
+    import HotList from "@/views/HotList.vue"
+    import Me from "@/views/Me.vue"
+    import MeZhihu from "@/views/MeZhihu.vue"
+    import MeZhihu2 from "@/views/MeZhihu2.vue"
+    import MeZhihuSt from "@/views/MeZhihuSt.vue"
+    import MeZhihuNamed from "@/views/MeZhihuNamed.vue"
+     import main_article from "@/views/main_article.vue"
+     import CustomPopupTest from "@/views/CustomPopupTest.vue"
+     import MyVideo from "@/views/MyVideo.vue"
+     import StuTable from "@/views/stu-table.vue"
+     import ArticleTable from "@/views/article-table.vue"
+      import VantStyle from "@/views/vant-style.vue"
+     import JuejinComment from "@/components/JuejinComment.vue"
+
+
+    // import Video from "@/views/Video.vue"
 
     export default defineComponent({
         name: 'HomeView',
         components: {
-            ZhihuCard,
-            HotBox
+            // ZhihuCard,
+            // HotBox,
+            CustomPopupTest,
+            Home,
+            ShouYe,
+            HotList,
+            Me,
+            // MeZhihu,
+            // MeZhihu2,
+            // MeZhihuSt,
+            MeZhihuNamed,
+            // Video
+            main_article,
+            JuejinComment,
+            MyVideo,
+            StuTable,
+            ArticleTable,
+            VantStyle
+
         },
 
         setup() {
-            const active = ref(0);
+            // const active = ref(0);
+            // const active = ref(2);
+            const active = ref(1);
             const value = ref('');
             return {value,
                 active};
@@ -117,21 +179,18 @@
     }
 
     .look-btn {
-        // float: right;
-        margin-left: 50px;
         font-size: 70%;
         width: 68px;
         height: 24px;
     }
 
     .watch-upgrade {
-        background: rgb(255, 255, 255);
         display: flex;
         flex-direction: row;
     }
 
     .watch-tip {
-        // background: #4d46ff;
+        background: #4d46ff;
         width: 228px;
     }
 
@@ -169,9 +228,6 @@
         margin-left: 5px;
     }
 
-.home-bg{
-    background: rgba(86, 84, 84, 0.647);
-}
     .updated_at {
         margin-right: 10px;
         margin-left: 5px;
@@ -187,14 +243,6 @@
 
     .row * {
         padding: 0;
-    }
-    .one-card{
-        // 这里改颜色没用
-        background: rgb(255, 255, 255);
-    //    margin-left: 10px;
-    //    margin-right: 10px;
-    //     margin-left: 20px;
-    //    margin-right: 20px;
     }
 
     .elliptical-background {
@@ -308,11 +356,6 @@
         display: flex;
         /*flex-direction: column;*/
         flex-direction: row;
-    }
-    .cross-btn{
-        margin: 0 auto;
-        height: 20px;
-         line-height:20px;
     }
 
     .mid-right {

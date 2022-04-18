@@ -7,7 +7,7 @@
       </div>
       <div class="flex-row">
         <div class="section_3"></div>
-        <div class="section_4"></div>
+        <div class="new-icon"></div>
       </div>
     </div>
     <div class="section_5"></div>
@@ -67,7 +67,7 @@
     width: 2.44rem;
     height: 1rem;
   }
-  .section_4 {
+  .new-icon {
     margin-left: 0.69rem;
     background-color: rgb(168, 28, 28);
     width: 1.13rem;

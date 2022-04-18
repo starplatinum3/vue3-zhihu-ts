@@ -3,7 +3,8 @@
     <van-tabs v-model:active="active">
 <!--        <van-tab title="视频"><Video></Video></van-tab>-->
         <van-tab title="视频"><MyVideo></MyVideo></van-tab>
-        <van-tab title="推荐"><Home></Home></van-tab>
+<!--        <van-tab title="推荐"><Home></Home></van-tab>-->
+        <van-tab title="推荐"><HomeBox></HomeBox></van-tab>
         <van-tab title="热榜"><HotList></HotList></van-tab>
         <van-tab title="首页"><ShouYe></ShouYe></van-tab>
 
@@ -18,6 +19,7 @@
         <van-tab title="CustomPopupTest"><CustomPopupTest></CustomPopupTest></van-tab>
         <van-tab title="StuTable"><StuTable></StuTable></van-tab>
         <van-tab title="ArticleTable"><ArticleTable></ArticleTable></van-tab>
+          <van-tab title="VantStyle"><VantStyle></VantStyle></van-tab>
 
     </van-tabs>
 <!--    https://blog.csdn.net/u013611978/article/details/119598842-->
@@ -104,13 +106,17 @@
      import MyVideo from "@/views/MyVideo.vue"
      import StuTable from "@/views/stu-table.vue"
      import ArticleTable from "@/views/article-table.vue"
+      import VantStyle from "@/views/vant-style.vue"
+      import HomeBox from "@/views/home-box.vue"
      import JuejinComment from "@/components/JuejinComment.vue"
+
 
     // import Video from "@/views/Video.vue"
 
     export default defineComponent({
         name: 'HomeView',
         components: {
+            HomeBox,
             // ZhihuCard,
             // HotBox,
             CustomPopupTest,
@@ -127,7 +133,8 @@
             JuejinComment,
             MyVideo,
             StuTable,
-            ArticleTable
+            ArticleTable,
+            VantStyle
 
         },
 

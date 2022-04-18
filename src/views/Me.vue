@@ -20,7 +20,7 @@
     </div>
     <div class="flex-col group_2">
         <MeCreate class="section_2" />
-        <BuyVip class="section_4" />
+        <BuyVip class="new-icon" />
         <GridBook class="image-wrapper" />
         <CreateCenter class="section_6" />
     </div>
@@ -56,7 +56,7 @@
         margin-left: 0.31rem;
         margin-right: 0.13rem;
     }
-    .section_4 {
+    .new-icon {
         margin-left: 0.19rem;
         margin-top: 0.88rem;
     }

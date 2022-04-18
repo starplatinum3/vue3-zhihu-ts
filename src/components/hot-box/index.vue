@@ -3,9 +3,11 @@
     <div class="hot-box">
 
         <div class="content">
-            <div class="hot-name">知乎热榜</div>
+            <!-- <div class="hot-name">知乎热榜</div> -->
+            <img width="50px" height="50px" src="@/assets/zhihurebang.jpg">
             <div class="hot-content">
-                <div class="how-num">热度</div>
+                微信朋友圈可以农场
+                <div class="how-num">424万热度</div>
             </div>
             <!--        https://cloud.tencent.com/developer/ask/80815-->
             <!--        <div class="hot-pic">-->
@@ -40,11 +42,13 @@
         position: absolute;
         bottom: 4px;
         right: 4px;
+        font-size: 50%;
     }
 
     .hot-pic {
         width: 55px;
         border-radius: 25%;
+        margin-left: 30px;
     }
 
     .hot-content {
