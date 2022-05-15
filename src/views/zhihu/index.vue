@@ -120,7 +120,7 @@
             // ZhihuCard,
             // HotBox,
             CustomPopupTest,
-            Home,
+            // Home,
             ShouYe,
             HotList,
             Me,

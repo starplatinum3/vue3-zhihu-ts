@@ -43,7 +43,11 @@ const routes: Array<RouteRecordRaw> = [
         name: 'comment-table',
         component: () => import('../views/comment-table.vue')
     },
-
+    {
+        path: '/MainArticle',
+        name: 'MainArticle',
+        component: () => import('../views/main_article.vue')
+    },
   // {
   //   path: '/github',
   //   name: 'github',

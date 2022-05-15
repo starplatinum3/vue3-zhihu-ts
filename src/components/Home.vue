@@ -20,13 +20,27 @@
             <div class="cross-btn">x</div>
         </div>
     </div>
-    <div class="item-box one-card">
-        <ZhihuCard class="one-card"></ZhihuCard>
-    </div>
 
- <div class="item-box one-card">
-        <ZhihuCard class="one-card"></ZhihuCard>
+    <div v-for="i in 8"  @click="articleClicked" :key="i">
+        <div class="item-box one-card">
+<!--            里面添加@click没有 用处-->
+            <ZhihuCard @click="articleClicked" class="one-card"></ZhihuCard>
+        </div>
     </div>
+<!--    <div class="item-box one-card">-->
+<!--        <ZhihuCard class="one-card"></ZhihuCard>-->
+<!--    </div>-->
+
+<!-- <div class="item-box one-card">-->
+<!--        <ZhihuCard class="one-card"></ZhihuCard>-->
+<!--    </div>-->
+
+<!--    <div class="item-box one-card">-->
+<!--        <ZhihuCard class="one-card"></ZhihuCard>-->
+<!--    </div>-->
+<!--    <div class="item-box one-card">-->
+<!--        <ZhihuCard class="one-card"></ZhihuCard>-->
+<!--    </div>-->
     <!--    https://youzan.github.io/vant/#/zh-CN/tabbar-->
 
     <van-tabbar v-model="active">
@@ -82,6 +96,8 @@
 
     import ZhihuCard from "@/components/zhihu-card/index.vue"
     import HotBox from "@/components/hot-box/index.vue"
+    // import { useRouter } from "vue-router";
+    import { useRoute, useRouter } from "vue-router"
 
     export default defineComponent({
         name: 'HomeView',
@@ -91,10 +107,20 @@
         },
 
         setup() {
+            const router = useRouter()
             const active = ref(0);
             const value = ref('');
-            return {value,
-                active};
+
+            console.log("setup")
+            const  articleClicked=()=>{
+                console.log("articleClicked")
+                router.push("/MainArticle")
+            }
+            return {
+                value,
+                active,
+                articleClicked
+            };
         },
     });
 
@@ -114,6 +140,7 @@
         /*align-items: center;*/
         /*justify-content: center;*/
         margin-top: 5px;
+        /*padding-bottom: 10px;*/
     }
 
     .look-btn {
@@ -125,6 +152,7 @@
     }
 
     .watch-upgrade {
+        padding-bottom: 10px;
         background: rgb(255, 255, 255);
         display: flex;
         flex-direction: row;
@@ -170,7 +198,8 @@
     }
 
 .home-bg{
-    background: rgba(86, 84, 84, 0.647);
+    /*background: rgba(86, 84, 84, 0.647);*/
+    background: #F4F4F4;
 }
     .updated_at {
         margin-right: 10px;

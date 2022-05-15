@@ -15,6 +15,22 @@ import '@/common/stylus/iconfont.styl'
 import ElementPlus from 'element-plus'
 import 'element-plus/lib/theme-chalk/index.css'
 
+//弹出框禁止滑动
+// Vue.prototype.noScroll = function () {
+//     var mo = function (e) { e.preventDefault() }
+//     document.body.style.overflow = 'hidden'
+//     document.addEventListener('touchmove', mo, false)// 禁止页面滑动
+//   }
+   
+//   //弹出框可以滑动
+//   Vue.prototype.canScroll = function () {
+//     var mo = function (e) {
+//       e.preventDefault()
+//     }
+//     document.body.style.overflow = ''// 出现滚动条
+//     document.removeEventListener('touchmove', mo, false)
+//   }
+
 createApp(App).use(store).use(router).use(Vant).
 use(Search).use(Button).use(Tab).use(Tabs).use(Sticky).
     use(ElementPlus).

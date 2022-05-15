@@ -197,6 +197,7 @@
     }
 
     .brows-cnt {
+        margin-bottom: 10px;
         color: #999999;
         font-size: 80%;
         background: #ff9854;

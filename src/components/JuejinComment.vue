@@ -4,7 +4,7 @@
             <el-avatar class="header-img" :size="40" :src="myHeader"></el-avatar>
             <div class="reply-info">
                 <div
-              
+
                         tabindex="0"
                         contenteditable="true"
                         id="replyInput"
@@ -95,6 +95,7 @@
         },
         // update() {
         // },
+        // vue 弹出框 下面 响应
         unbind(el, binding) {
             // 解除事件监听
             document.removeEventListener('click', el.vueClickOutside);
@@ -192,6 +193,9 @@
         },
         directives: {clickoutside},
         methods: {
+              messageTitleClick(num) { // 点击了具体某条消息
+      console.log("点击了消息", num);
+    },
             inputFocus() {
                 var replyInput = document.getElementById('replyInput');
                 replyInput.style.padding = "8px 8px"

@@ -14,9 +14,13 @@
 
 
 
-    <van-tabs v-model:active="active">
+    <van-tabs  color="blue" v-model:active="active">
 <!--        <van-tab title="视频"><Video></Video></van-tab>-->
+<!--        // 下面那个下划线颜色-->
         <van-tab title="全站"><Home></Home></van-tab>
+        <van-tab title="直播"><Home></Home></van-tab>
+        <van-tab title="数码"><Home></Home></van-tab>
+        <van-tab title="职场"><Home></Home></van-tab>
         <van-tab title="视频"><MyVideo></MyVideo></van-tab>
 
         <van-tab title="热榜"><HotList></HotList></van-tab>

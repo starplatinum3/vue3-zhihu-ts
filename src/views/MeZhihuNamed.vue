@@ -1,6 +1,7 @@
-<template>
+<template >
 
-    <van-sticky >
+    <div class="whole">
+    <van-sticky class="top-bar-wrapper">
         <div class="flex-row top-bar">
 <!--            style="background:#ff523c;"-->
         <div class="QR-code-wapper" >
@@ -39,32 +40,37 @@
             </div>
             <div class="flex-col group_1">
                 <h2 class="nickname-me">求你了</h2>
-                <div class="salt-cnt">10000的研制</div>
+                <div class="salt-cnt">10000盐值</div>
             </div>
-            <div class="to-me-home">个人主页</div>
+            <div class="to-me-home">个人主页 &gt;
+
+<!--                <span  class="right-arrow"></span>-->
+            </div>
+<!--            <div class="right-arrow"></div>-->
+
         </div>
         <div class="flex-row create-box">
 
 
             <div class="create-part">
-                <div>222</div>
+                <div  class="watch-cnt">  1 </div>
                 <div>创作</div>
-                <div>14个草稿</div>
+<!--                <div>14个草稿</div>-->
             </div>
             <div class="create-part">
-                <div>222</div>
-                <div>创作</div>
-                <div>14个草稿</div>
+                <div class="watch-cnt">312</div>
+                <div>关注</div>
+<!--                <div>14个草稿</div>-->
             </div>
             <div class="create-part">
-                <div>222</div>
-                <div>创作</div>
-                <div>14个草稿</div>
+                <div  class="watch-cnt">222</div>
+                <div>收藏</div>
+<!--                <div>14个草稿</div>-->
             </div>
             <div class="create-part">
-                <div>222</div>
-                <div>创作</div>
-                <div>14个草稿</div>
+                <div  class="watch-cnt">222</div>
+                <div>最近浏览</div>
+<!--                <div>14个草稿</div>-->
             </div>
 
             <!--            <div class="section_1"></div>-->
@@ -99,12 +105,64 @@
 <!--            <div class="chart"></div>-->
 <!--            <div class="chart"></div>-->
 <!--            <div class="chart"></div>-->
-            <div v-for="i in 8" class="chart" :key="i">
-<!--                {{i}}-->
-<!--                <div>啊啊</div>-->
-                <img class="grid-item-book" src="@/assets/miku.jpg">
-                <div>啊啊</div>
+<!--            <div v-for="i in 8" class="chart" :key="i">-->
+<!--            https://acc15t4bm5.feishu.cn/docs/doccnunkprCV2dRpleaGfAVyAyc-->
+<!--            style="color:red;"-->
+<!--            <div></div>-->
+            <div class="chart">
+                <i class="chart grid-item-book icon iconfont icon-shujia"></i>
+                <div>书架</div>
             </div>
+            <div class="chart">
+                <i class="chart grid-item-book icon iconfont icon-yigou"></i>
+                <div>已购</div>
+            </div>
+
+            <div class="chart">
+                <i class="chart grid-item-book icon iconfont icon-fufei"></i>
+                <div>付费咨询</div>
+            </div>
+            <div class="chart">
+                <i class="chart grid-item-book icon iconfont icon-huodong"></i>
+                <div>活动广场</div>
+            </div>
+            <div class="chart">
+                <i class="chart grid-item-book icon iconfont icon-qianbao"></i>
+                <div>钱包</div>
+            </div>
+            <div class="chart">
+                <i class="chart grid-item-book icon iconfont icon-shequ"></i>
+                <div>社区共建</div>
+            </div>
+            <div class="chart">
+                <i class="chart grid-item-book icon iconfont icon-fankui"></i>
+                <div>反馈与帮助</div>
+            </div>
+            <div class="chart">
+                <i class="chart grid-item-book icon iconfont icon-zhibo"></i>
+                <div>直播</div>
+            </div>
+
+
+
+
+<!--            <div class="chart">-->
+<!--            <i class="chart grid-item-book icon iconfont icon-qianbao"></i>-->
+<!--            <div>钱包</div>-->
+<!--            </div>-->
+
+
+
+<!--            <div v-for="(imgUrl,i) in toolImgs" class="chart" :key="i">-->
+<!--&lt;!&ndash;                {{i}}&ndash;&gt;-->
+<!--&lt;!&ndash;                <div>啊啊</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <img class="grid-item-book" src="@/assets/miku.jpg">&ndash;&gt;-->
+<!--&lt;!&ndash;                <img class="grid-item-book" src="imgUrl">&ndash;&gt;-->
+<!--                <img class="grid-item-book" :src="imgUrl">-->
+<!--                <div>啊啊</div>-->
+<!--&lt;!&ndash;                icon-yigou&ndash;&gt;-->
+<!--            </div>-->
+
         </div>
 
 <!--        <div class="flex-col create-box">-->
@@ -199,43 +257,48 @@
             <div class="content-items-box create-center-box">
 
                 <div class="create-part">
-                    <div>222</div>
-                    <div>创作</div>
-                    <div>14个草稿</div>
+<!--                    <div>222</div>-->
+                    <i class="chart grid-item-book icon iconfont icon-neirongguanli"></i>
+                    <div  class="grid-item-book-text" >内容管理</div>
+                    <div class="draft" >14个草稿</div>
                 </div>
                 <div class="create-part">
-                    <div>222</div>
-                    <div>创作</div>
-                    <div>14个草稿</div>
+                    <i class="chart grid-item-book icon iconfont icon-fenxi"></i>
+<!--                    <div>222</div>-->
+                    <div class="grid-item-book-text" >内容分析</div>
+<!--                    <div>14个草稿</div>-->
                 </div>
                 <div class="create-part">
-                    <div>222</div>
-                    <div>创作</div>
-                    <div>14个草稿</div>
+<!--                    <div>222</div>-->
+                    <i class="chart grid-item-book icon iconfont icon-shouyi"></i>
+                    <div class="grid-item-book-text">收益分析</div>
+<!--                    <div>14个草稿</div>-->
                 </div>
                 <div class="create-part">
-                    <div>222</div>
-                    <div>创作</div>
-                    <div>14个草稿</div>
+<!--                    <div>222</div>-->
+                    <i class="chart grid-item-book icon iconfont icon-chuangzuo"></i>
+                    <div class="grid-item-book-text">创作学院</div>
+<!--                    <div>14个草稿</div>-->
                 </div>
 
             </div>
 <!--            <div class="flex-col items-center today-statis">-->
             <div class="flex-row items-center today-statis">
                 <div class="flex-col today-play">
-                    <div>222</div>
+                    <div class="play-cnt">222</div>
                     <div>今日播放</div>
                 </div>
 
 <!--                <div class="section_2"></div>-->
                 <div class="flex-col today-agree">
-                    <div>222</div>
-                    <div>今日播放</div>
+                    <div class="play-cnt">222</div>
+                    <div>今日新增赞同数</div>
                 </div>
             </div>
         </div>
     </div>
     <!--        </div>-->
+    </div>
 </template>
 <!--vue 3 ts -->
 <!--<script lang>-->
@@ -249,7 +312,7 @@
 
 <script lang="ts">
     import { defineComponent } from 'vue';
-
+    import {ref} from 'vue';
     export default defineComponent({
         name: 'HelloWorld',
         props: {
@@ -259,8 +322,17 @@
             const  nightSet=()=>{
                 console.log("nightSet")
             }
+            // const toolImgs = ref(["@/assets/miku.jpg"]);
+            // const toolImgs = ref(["~/assets/miku.jpg"]);
+            // const toolImgs = ref(["assets/miku.jpg"]);
+            // const toolImgs = ref([require("assets/miku.jpg")]);
+            // const toolImgs = ref([require("~/assets/miku.jpg")]);
+            // 要require
+            const toolImgs = ref([require("@/assets/miku.jpg")]);
+            // const toolsImgs=["@/assets/miku.jpg"]
             return {
-                nightSet
+                nightSet,
+                toolImgs
             };
         }
     });
@@ -269,13 +341,25 @@
 
 <style scoped lang="css">
 
+    .whole {
+        /*background:   #F4F4F4;*/
+        /*background-color:   #F4F4F4;*/
+        background-color: #F6F6F6;
+    }
+    .play-cnt{
+        /*font: bold;*/
+        font-weight:bold;
+    }
     .today-play{
+        /*height: ;*/
+        margin-top: 10px;
         width: 50%;
-        background: #48ff52;
+        /*background: #48ff52;*/
     }
     .today-agree{
+        margin-top: 10px;
         width: 50%;
-        background: #48ff52;
+        /*background: #48ff52;*/
     }
     .create-center-box{
         display: flex;
@@ -292,10 +376,23 @@
         height: 200px;
     }
 
+    .draft{
+
+        color: #B9B9B9;
+    }
+    .grid-item-book-text{
+        /*margin-top: 10px;*/
+        margin-top: 5px;
+    }
     .grid-item-book{
         margin-top: 20px;
-        width: 40px;
-        height: 40px;
+        /*width: 40px;*/
+        /*height: 40px;*/
+        width: 70px;
+        height: 70px;
+        /*font-size: 20px;*/
+        font-size: 30px;
+
     }
 
     .chart {
@@ -375,30 +472,45 @@
 
     .page {
         padding: 1.25rem 0.63rem 3.88rem 0.88rem;
-        background-color: rgb(255, 255, 255);
+        /*background-color: rgb(255, 255, 255);*/
+        background-color: #F6F6F6;
         width: 100%;
         overflow-y: auto;
         height: 100%;
     }
 
     .me-info-box {
-        padding: 1.38rem 1rem 0.81rem 1.56rem;
-        background-color: rgb(196, 196, 196);
+        /*padding-top:1.38rem ;*/
+        /*padding-top:1.38rem ;*/
+        /*上右下左*/
+        /*padding: 1.38rem 1rem 0.81rem 1.56rem;*/
+        /*padding: 1.08rem 1rem 0.81rem 1.06rem;*/
+        /*background-color: rgb(196, 196, 196);*/
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        background-color: white;
     }
 
     .create-box {
         display: flex;
         justify-content: space-between;
         margin-top: 0.75rem;
-        padding: 0.81rem 1.13rem 0.63rem;
-        background-color: rgb(196, 196, 196);
+        /*padding: 0.81rem 1.13rem 0.63rem;*/
+        /*padding: 0.81rem 1.13rem 0.01rem;*/
+        padding-top: 0.81rem;
+        padding-bottom: 0.01rem;
+        /*background-color: rgb(196, 196, 196);*/
+        background-color: white;
         border-radius: 0.38rem;
     }
 
     .buy-it-box {
+       /*bak #FCEAD6;*/
         margin-top: 0.81rem;
         padding: 0.31rem 1rem 0.5rem 1.13rem;
-        background-color: rgb(196, 196, 196);
+        /*background-color: rgb(196, 196, 196);*/
+        background-color:  #FCEAD6;
         border-radius: 0.19rem;
     }
 
@@ -421,9 +533,11 @@
     }
 
     .create-level-box {
-        margin-top: 0.31rem;
+        /*margin-top: 0.31rem;*/
+        margin-top: 0.61rem;
         padding: 0 1rem 0.63rem 1.13rem;
-        background-color: rgb(196, 196, 196);
+        /*background-color: rgb(196, 196, 196);*/
+        background-color: white;
         border-radius: 0.25rem;
     }
 
@@ -439,16 +553,42 @@
         width: 8.56rem;
     }
 
+    /*右箭头*/
+    .right-arrow {
+        display :inline-block;
+        position: relative;
+        width: 28px;
+        height: 28px;
+        margin-right: 20px;
+    }
+    .right-arrow::after {
+        display: inline-block;
+        content: " ";
+        height: 13px;
+        width: 13px;
+        border-width: 3px 3px 0 0;
+        border-color: #0177ff;
+        border-style: solid;
+        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        position: absolute;
+        top: 50%;
+        left: 150px;
+    }
+
+
     .to-me-home {
-        margin-left: 1.06rem;
-        background-color: rgb(207, 50, 50);
-        width: 4.63rem;
-        height: 1.88rem;
+        /*margin-left: 1.06rem;*/
+        /*margin-left: 2.06rem;*/
+        margin-left: 4.06rem;
+        /*background-color: rgb(207, 50, 50);*/
+        /*width: 4.63rem;*/
+        /*height: 1.88rem;*/
     }
 
     .create-part {
-        font-size: 60%;
-        background-color: rgb(52, 79, 175);
+        /*font-size: 60%;*/
+        /*font-size: 0%;*/
+        /*background-color: rgb(52, 79, 175);*/
         width: 4.31rem;
         height: 3.13rem;
     }
@@ -487,7 +627,7 @@
 
     .book-item {
         margin-left: 1.25rem;
-        background-color: rgb(184, 26, 26);
+        /*background-color: rgb(184, 26, 26);*/
         width: 3.5rem;
         height: 3.5rem;
     }
@@ -497,17 +637,20 @@
     }
 
     .content-items-box {
+        margin-top: 10px;
         margin-left: 0.25rem;
-        background-color: rgb(170, 24, 24);
+        /*background-color: rgb(170, 24, 24);*/
         height: 5rem;
     }
 
     .today-statis {
+        /*border: #999999 1px solid;*/
+        border: #e2e2e2 1px solid;
         justify-content: space-between;
         margin-left: 0.44rem;
         margin-top: 0.31rem;
         padding: 0.063rem 0 0.75rem;
-        background-color: rgb(184, 31, 31);
+        /*background-color: rgb(184, 31, 31);*/
         border-radius: 0.31rem;
     }
 
@@ -528,6 +671,10 @@
         position: absolute;
     }
 
+    .watch-cnt{
+        font-weight: bold;
+    }
+
     .nickname-me {
         /*margin-top: 0.2rem;*/
         margin-top: 0.1rem;
@@ -538,21 +685,25 @@
     }
 
     .salt-cnt {
-        margin-left: 0.44rem;
+        /*margin-left: 0.44rem;*/
+        text-align: left;
         margin-top: 0.63rem;
-        background-color: rgb(162, 161, 168);
-        width: 6.38rem;
+        /*background-color: rgb(162, 161, 168);*/
+        /*width: 6.38rem;*/
         height: 1.19rem;
     }
 
     .buy-name {
-        background-color: rgb(190, 43, 43);
+      /*color:   #EBD2A9;*/
+      color: #78501D;
+        /*background-color: rgb(190, 43, 43);*/
         height: 1.5rem;
     }
 
     .buy-discount {
-        margin: 0.63rem 0.38rem 0 0.31rem;
-        background-color: rgb(190, 43, 43);
+        /*margin: 0.63rem 0.38rem 0 0.31rem;*/
+        /*background-color: rgb(190, 43, 43);*/
+        color: #BD9A62;
         height: 1.69rem;
     }
 
@@ -563,16 +714,22 @@
     }
 
     .create-level {
-        background-color: rgb(214, 41, 41);
+        /*background-color: rgb(214, 41, 41);*/
         width: 4.31rem;
         height: 1.38rem;
+        /*border: #999999;*/
+        /*height: ;*/
+        font-weight:bold;
+
     }
 
     .level-cnt {
-        margin-left: 0.94rem;
-        background-color: rgb(212, 40, 40);
-        width: 3.56rem;
-        height: 1.38rem;
+        /*margin-left: 0.94rem;*/
+        /*background-color: rgb(212, 40, 40);*/
+        color: #3D7BC6;
+        /*width: 3.56rem;*/
+        /*height: 1.38rem;*/
+        margin-top: 2px;
     }
 
     .QR-code-wapper{
@@ -581,6 +738,9 @@
         /*height: 30px;*/
         width: 20px;
         height: 20px;
+    }
+    .top-bar-wrapper{
+        background-color: white;
     }
 
     .top-bar{
@@ -599,16 +759,16 @@
     }
 
     .go-into {
-        background-color: rgb(182, 41, 41);
-        width: 3.31rem;
-        height: 1.31rem;
+        /*background-color: rgb(182, 41, 41);*/
+        /*width: 3.31rem;*/
+        /*height: 1.31rem;*/
     }
 
     .go-into-arrow {
         margin-left: 0.69rem;
         margin-top: 0.13rem;
-        background-color: rgb(168, 28, 28);
-        width: 2.13rem;
-        height: 1.19rem;
+        /*background-color: rgb(168, 28, 28);*/
+        /*width: 2.13rem;*/
+        /*height: 1.19rem;*/
     }
 </style>

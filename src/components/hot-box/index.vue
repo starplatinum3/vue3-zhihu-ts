@@ -2,17 +2,21 @@
 
     <div class="hot-box">
 
-        <div class="content">
+        <div class="content-hot-main">
             <!-- <div class="hot-name">知乎热榜</div> -->
             <img width="50px" height="50px" src="@/assets/zhihurebang.jpg">
-            <div class="hot-content">
-                微信朋友圈可以农场
+            <div class="hot-content line-limit-length-hot-box">
+                我们需要做一个小箭头,最简单的办法就是直接用数学符号:">",但是这样做的缺点就是没有办法调节符号的大小,颜色......这就非常不理想.我在网上找到了一篇博客,专门解决了这个问题:
+
+                原文链接:https://blog.csdn.net/Che_rish/article/details/78871662
+
                 <div class="how-num">424万热度</div>
             </div>
             <!--        https://cloud.tencent.com/developer/ask/80815-->
             <!--        <div class="hot-pic">-->
             <!--            <img>-->
-            <img class="hot-pic" src="@/assets/miku.jpg" alt="miku"/>
+<!--            <img class="hot-pic" src="@/assets/miku.jpg" alt="miku"/>-->
+            <img class="hot-pic" src="@/assets/pengYouQuan.jpg" alt="miku"/>
 <!--                    </div>-->
         </div>
     </div>
@@ -32,10 +36,19 @@
     /*less import */
     @import "@/assets/style.less";
 
+    .line-limit-length-hot-box {
 
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+        /*//文本不换行，这样超出一行的部分被截取，显示...*/
+
+    }
     .how-num {
         color: #999999;
-        background: #4d46ff;
+        /*background: #4d46ff;*/
         float: right;
         width: 59px;
         height: 19px;
@@ -52,9 +65,10 @@
     }
 
     .hot-content {
+        margin-left: 10px;
         height: 53px;
         position: relative;
-        background: #ff523c;
+        /*background: #ff523c;*/
         width: 206px;
     }
 
@@ -179,7 +193,7 @@
         width: @screen_width;
     }
 
-    .content {
+    .content-hot-main {
         display: flex;
         flex-direction: row;
 
@@ -210,13 +224,13 @@
     .content-article {
         /*width: 349px;*/
         height: 72px;
-        background: #000dba;
+        /*background: #000dba;*/
     }
 
     .brows-cnt {
         color: #999999;
         font-size: 80%;
-        background: #ff9854;
+        /*background: #ff9854;*/
     }
 
     .mid-box {
@@ -249,8 +263,10 @@
 
     .hot-box {
 
+        background-color: white;
+        /*padding-bottom: 10px;*/
         width: 100%;
-        background: #4d46ff;
+        /*background: #4d46ff;*/
         justify-content: center;
         align-items: center;
         height: 72px;
@@ -260,7 +276,7 @@
 
     .hot-name {
         /*widows: ;*/
-        background: #ff9854;
+        /*background: #ff9854;*/
         width: 68px;
         height: 55px;
     }

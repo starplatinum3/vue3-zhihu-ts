@@ -1,7 +1,7 @@
 <template>
   <!--    <div class="screen">-->
   <div class="inside-mid-box">
-    <div class="content">
+    <div class="content-inside-mid-box">
       <!--            <div class="content-mid">-->
       <h4 class="title">web前端面试题目题目</h4>
       <div class="mid-box">
@@ -10,6 +10,7 @@
             <!--          为什么这个不显示-->
             <!--          flex row 里的图片不显示-->
             <img class="avatar-img" src="@/assets/miku.jpg" alt="miku" />
+<!--            <img class="avatar-img" src="@/assets/pengYouQuan.jpg" alt="miku" />-->
             <!--             <div class="avatar">头像-->
             <!--                 &lt;!&ndash; <img src="src/assets/miku.jpg"/> &ndash;&gt;-->
             <!--                 &lt;!&ndash; src 不行 &ndash;&gt;-->
@@ -22,14 +23,24 @@
           </div>
           <!--            <img class="avatar-img" src="@/assets/miku.jpg" alt="miku"/>-->
 
-          <div class="content-article">内容</div>
+          <div class="content-article">Vant
+            轻量、可靠的移动端 Vue 组件库
+
+            特性
+            50+ 个组件
+            90% 单元测试覆盖率
+            完善的中英文文档和示例
+
+
+          </div>
         </div>
         <div class="mid-right">
-          <img class="mid-right-img" src="@/assets/miku.jpg" alt="miku" />
+<!--          <img class="mid-right-img" src="@/assets/miku.jpg" alt="miku" />-->
+          <img class="mid-right-img" src="@/assets/vant.png" alt="miku" />
         </div>
       </div>
 
-      <div class="brows-cnt">浏览</div>
+      <div class="brows-cnt-card">浏览</div>
       <!--            </div>-->
     </div>
   </div>
@@ -102,7 +113,7 @@ export default {
 
 /*有头绪了 貌似是这里有padding*/
 .row {
-  background: red;
+  /*background: red;*/
   display: flex;
   flex-direction: row;
   /* flex-direction: row; */
@@ -176,7 +187,7 @@ export default {
   // height: 22px;
   // margin-left: 30px;
 
-  background: purple;
+  /*background: purple;*/
   //  width: 300px;
   //  width: 183*2px;
   //  height: 22*2px;
@@ -200,7 +211,7 @@ export default {
 }
 
 @content_width: 370px;
-.content {
+.content-inside-mid-box {
   /*width: 400px;*/
   /*width: 350px;*/
 //   width: 370px;
@@ -228,6 +239,7 @@ export default {
 }
 
 .nickname-row {
+  text-align: left;
   height: 30px;
 }
 
@@ -241,20 +253,24 @@ export default {
 }
 
 .title{
+  text-align: left;
     margin-top: 3px;
     margin-bottom: 3px;
 }
 
 .content-article {
+  text-align: left;
   /*width: 349px;*/
   height: 72px;
-  background: #000dba;
+  /*background: #000dba;*/
 }
 
-.brows-cnt {
+.brows-cnt-card {
+  text-align: left;
   color: #999999;
   font-size: 80%;
   background: #ffffff;
+  margin-bottom: 10px;
 }
 
 .mid-box {

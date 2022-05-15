@@ -9,14 +9,52 @@
       <van-tabbar-item to="/zhihu" icon="home-o">首页</van-tabbar-item>
 <!--      <van-tabbar-item to="/" icon="home-o">首页</van-tabbar-item>-->
       <van-tabbar-item to="/cart" icon="shopping-cart-o">购物车</van-tabbar-item>
-      <van-tabbar-item to="/" icon="friends-o">加</van-tabbar-item>
-      <van-tabbar-item to="/zhihu" icon="friends-o">知乎</van-tabbar-item>
+<!--      <van-tabbar-item to="/" icon="friends-o">加</van-tabbar-item>-->
 
+      <van-tabbar-item to="/zhihu" icon="friends-o">知乎</van-tabbar-item>
+      <van-tabbar-item to="/" >
+<!--          icon="friends-o"-->
+<!--          会员-->
+          <span>会员</span>
+          <template #icon="props">
+              <img :src="props.active ? icon.active : icon.inactive" />
+          </template></van-tabbar-item>
 <!--      <van-tabbar-item to="/mine" icon="friends-o">我的</van-tabbar-item>-->
       <van-tabbar-item to="/MeZhihuNamed" icon="friends-o">我的</van-tabbar-item>
 </van-tabbar>
 
 </template>
+
+<script>
+
+
+
+    export default {
+
+        data() {
+            let iconList=[
+                {
+                    active: 'https://img.yzcdn.cn/vant/user-active.png',
+                    inactive: 'https://img.yzcdn.cn/vant/user-inactive.png',
+                },
+            ]
+
+            return {
+                active: 0,
+                icon: {
+                    active: 'https://img.yzcdn.cn/vant/user-active.png',
+                    inactive: 'https://img.yzcdn.cn/vant/user-inactive.png',
+                },
+            };
+        },
+    };
+</script>
+
+<!--active: 0,-->
+<!--icon: {-->
+<!--active: 'https://img.yzcdn.cn/vant/user-active.png',-->
+<!--inactive: 'https://img.yzcdn.cn/vant/user-inactive.png',-->
+<!--},-->
 
 <style lang="scss">
 
