@@ -18,9 +18,11 @@
           <span>会员</span>
           <template #icon="props">
               <img :src="props.active ? icon.active : icon.inactive" />
-          </template></van-tabbar-item>
+          </template>
+          </van-tabbar-item>
 <!--      <van-tabbar-item to="/mine" icon="friends-o">我的</van-tabbar-item>-->
-      <van-tabbar-item to="/MeZhihuNamed" icon="friends-o">我的</van-tabbar-item>
+<!--      <van-tabbar-item to="/MeZhihuNamed" icon="friends-o">我的</van-tabbar-item>-->
+      <van-tabbar-item to="/MeWrapper" icon="friends-o">我的</van-tabbar-item>
 </van-tabbar>
 
 </template>

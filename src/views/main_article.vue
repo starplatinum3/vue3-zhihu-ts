@@ -258,6 +258,9 @@
     }
 
     .main-content-box {
+        padding-left: 20px;
+        /* padding-right: 10px; */
+         padding-right: 20px;
         text-align: left;
     }
 
@@ -281,13 +284,17 @@
     }
 
     .agree-line {
+        padding-left: 10px;
+        padding-right: 10px;
+
         background: #90ff76;
         /*margin-top: 24.81rem;*/
         /*margin-top: 5rem;*/
         /*padding: 6.81rem 0.44rem 0.38rem 0.5rem;*/
         /*padding:0.3rem 0.44rem 0.38rem 0.5rem;*/
         background-color: rgb(255, 255, 255);
-        margin-bottom: 3rem;
+        /* margin-bottom: 3rem; */
+          margin-bottom: 4rem;
         margin-top: 2rem;
     }
 
@@ -297,6 +304,8 @@
     }
 
     .top-bar-main-article {
+        /* margin-top: 2rem; */
+        margin-top: 1rem;
         /*padding-bottom: 0.88rem;*/
     }
 

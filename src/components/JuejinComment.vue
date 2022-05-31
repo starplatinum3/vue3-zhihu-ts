@@ -27,7 +27,8 @@
                 <span class="author-time">{{item.time}}</span>
             </div>
             <div class="icon-btn">
-                <span @click="showReplyInput(i,item.name,item.id)"><i class="iconfont el-icon-s-comment"></i>{{item.commentNum}}</span>
+                <span @click="showReplyInput(i,item.name,item.id)">
+                    <i class="iconfont el-icon-s-comment"></i>{{item.commentNum}}</span>
                 <i class="iconfont el-icon-caret-top"></i>{{item.like}}
             </div>
             <div class="talk-box">
@@ -465,6 +466,7 @@
     }
 
     .author-title {
+        margin-top: 1rem;
         padding: 10px;
     }
 

@@ -29,6 +29,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/MeZhihuNamed.vue')
   },
     {
+        path: '/MeWrapper',
+        name: 'MeWrapper',
+        component: () => import('../views/MeWrapper.vue')
+    },
+
+    {
         path: '/stu-table',
         name: 'stu-table',
         component: () => import('../views/stu-table.vue')
@@ -48,6 +54,17 @@ const routes: Array<RouteRecordRaw> = [
         name: 'MainArticle',
         component: () => import('../views/main_article.vue')
     },
+    {
+        path: '/MessageView',
+        name: 'MessageView',
+        component: () => import('../views/MessageView.vue')
+    },
+    {
+      path: '/MeHome',
+      name: 'MeHome',
+      component: () => import('../views/MeHome.vue')
+  },
+    
   // {
   //   path: '/github',
   //   name: 'github',
