@@ -11,6 +11,7 @@
         </div>
 <!--            @focus="onFocus"-->
         <van-search
+        class="search"
                 v-model="keywordSubordinate"
 
                 @focus="$emit('onSearchFocus')"
@@ -46,7 +47,7 @@
                         class="avatar_img"
                 />
             </div>
-            <div class="flex-col group_1">
+            <div class="flex-col person-box">
                 <h2 class="nickname-me">求你了</h2>
                 <div class="salt-cnt">10000盐值</div>
             </div>
@@ -599,7 +600,11 @@
     .create-level-box {
         /*margin-top: 0.31rem;*/
         margin-top: 0.61rem;
-        padding: 0 1rem 0.63rem 1.13rem;
+        /* padding-left: 20px; */
+         padding-left: 10px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        /* padding: 0 1rem 0.63rem 1.13rem; */
         /*background-color: rgb(196, 196, 196);*/
         background-color: white;
         border-radius: 0.25rem;
@@ -611,10 +616,13 @@
         position: relative;
     }
 
-    .group_1 {
+    .person-box {
+    /* .group_1 { */
         margin-left: 0.31rem;
         margin-top: 0.19rem;
-        width: 8.56rem;
+        /* margin-right: 10px; */
+        margin-right: 20px;
+        /* width: 8.56rem; */
     }
 
     /*右箭头*/
@@ -653,8 +661,15 @@
         /*font-size: 60%;*/
         /*font-size: 0%;*/
         /*background-color: rgb(52, 79, 175);*/
-        width: 4.31rem;
+        /* width: 4.31rem; */
         height: 3.13rem;
+        /* width: 300px; */
+        /* width: 20px; */
+         /* width: 40px; */
+          /* width: 60px; */
+           /* width: 100px; */
+            /* width: 80px; */
+              width: 70px;
     }
 
     .section_1 {
@@ -701,8 +716,12 @@
     }
 
     .content-items-box {
+        /* width: 400px; */
+          /* width: 200px; */
+           width: 300px;
         margin-top: 10px;
         margin-left: 0.25rem;
+        margin-right: 20px;
         /*background-color: rgb(170, 24, 24);*/
         height: 5rem;
     }
@@ -804,6 +823,12 @@
         height: 20px;
     }
     .top-bar-wrapper{
+        /* margin-right: 10px; */
+         /* margin-right: 50px; */
+        /* width: 1vw; */
+        /* 200 */
+         /* width: 0.8vw; */
+         /* width: 200px; */
         background-color: white;
     }
 
@@ -813,6 +838,7 @@
         /*padding: 1.38rem 1rem 0.81rem 0.02rem;*/
         margin-left: 10px;
         margin-right: 10px;
+        /* width: 200px; */
         /*width: 400px;*/
         align-items: center;
         justify-content: space-between;
@@ -831,8 +857,15 @@
     .go-into-arrow {
         margin-left: 0.69rem;
         margin-top: 0.13rem;
+
         /*background-color: rgb(168, 28, 28);*/
         /*width: 2.13rem;*/
         /*height: 1.19rem;*/
+    }
+
+    .search{
+        /* width: 200px; */
+         /* width: 100px; */
+           width: 200px;
     }
 </style>

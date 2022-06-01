@@ -6,8 +6,8 @@
         <span class="brief-info-title">官方消息</span>
         <span class="time">05-13</span>
       </div>
-
-      <div class="brief-info-content">情爱的 </div>
+<!-- <div class="brief-info-content">情爱的 </div> -->
+      <div class="brief-info-content">亲爱的用户 </div>
 <!--      1080 2340-->
       <hr>
     </div>
@@ -35,6 +35,7 @@ margin-left: 10px;
   .brief-info-content{
     margin-left: 10px;
     text-align: left;
+    width: 100px;
   }
   .title-row{
     display: flex;
@@ -47,7 +48,9 @@ margin-left: 10px;
     /*margin-left: 200px;*/
     /*margin-left: 240px;*/
     /*margin-left: 200px;*/
-    margin-left: 220px;
+    /* margin-left: 220px; */
+    /* margin-left: 200px; */
+     margin-left: 170px;
   }
   .brief-info-img{
     /*width: 20px;*/

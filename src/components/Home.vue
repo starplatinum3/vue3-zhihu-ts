@@ -145,7 +145,8 @@
 
     .look-btn {
         // float: right;
-        margin-left: 50px;
+        // margin-left: 50px;
+        margin-left: 30px;
         font-size: 70%;
         width: 68px;
         height: 24px;

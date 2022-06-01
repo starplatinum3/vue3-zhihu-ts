@@ -1,6 +1,6 @@
 <template>
 
-    <van-tabs color="blue" v-model:active="active">
+    <van-tabs v-model:active="active">
 <!--        <van-tab title="视频"><Video></Video></van-tab>-->
         <van-tab title="视频"><MyVideo></MyVideo></van-tab>
 <!--        <van-tab title="推荐"><Home></Home></van-tab>-->
@@ -8,20 +8,20 @@
         <van-tab title="热榜"><HotList></HotList></van-tab>
 
         
-        <!-- <van-tab title="首页"><ShouYe></ShouYe></van-tab>
+        <van-tab title="首页"><ShouYe></ShouYe></van-tab>
 
-        <van-tab title="me"><Me></Me></van-tab> -->
+        <van-tab title="me"><Me></Me></van-tab>
 <!--        <van-tab title="mezhi"><MeZhihu></MeZhihu></van-tab>-->
 <!--        <van-tab title="mezhi2"><MeZhihu2></MeZhihu2></van-tab>-->
 <!--        <van-tab title="MeZhihuSt"><MeZhihuSt></MeZhihuSt></van-tab>-->
 <!--        <van-tab title="MeZhihuSt"><MeZhihuSt></MeZhihuSt></van-tab>-->
-        <!-- <van-tab title="MeZhihuNamed"><MeZhihuNamed></MeZhihuNamed></van-tab>
+        <van-tab title="MeZhihuNamed"><MeZhihuNamed></MeZhihuNamed></van-tab>
           <van-tab title="main_article"><main_article></main_article></van-tab>
         <van-tab title="JuejinComment"><JuejinComment></JuejinComment></van-tab>
         <van-tab title="CustomPopupTest"><CustomPopupTest></CustomPopupTest></van-tab>
         <van-tab title="StuTable"><StuTable></StuTable></van-tab>
         <van-tab title="ArticleTable"><ArticleTable></ArticleTable></van-tab>
-          <van-tab title="VantStyle"><VantStyle></VantStyle></van-tab> -->
+          <van-tab title="VantStyle"><VantStyle></VantStyle></van-tab>
 
     </van-tabs>
 <!--    https://blog.csdn.net/u013611978/article/details/119598842-->
@@ -121,22 +121,22 @@
             HomeBox,
             // ZhihuCard,
             // HotBox,
-            // CustomPopupTest,
+            CustomPopupTest,
             // Home,
-            // ShouYe,
+            ShouYe,
             HotList,
-            // Me,
+            Me,
             // MeZhihu,
             // MeZhihu2,
             // MeZhihuSt,
-            // MeZhihuNamed,
+            MeZhihuNamed,
             // Video
-            // main_article,
-            // JuejinComment,
+            main_article,
+            JuejinComment,
             MyVideo,
-            // StuTable,
-            // ArticleTable,
-            // VantStyle
+            StuTable,
+            ArticleTable,
+            VantStyle
 
         },
 

@@ -4,7 +4,7 @@
 
         <div class="content-hot-main">
             <!-- <div class="hot-name">知乎热榜</div> -->
-            <img width="50px" height="50px" src="@/assets/zhihurebang.jpg">
+            <img class="hot-img" width="50px" height="50px" src="@/assets/zhihurebang.jpg">
             <div class="hot-content line-limit-length-hot-box">
                 我们需要做一个小箭头,最简单的办法就是直接用数学符号:">",但是这样做的缺点就是没有办法调节符号的大小,颜色......这就非常不理想.我在网上找到了一篇博客,专门解决了这个问题:
 
@@ -33,6 +33,9 @@
 <!--其他地方定义的 css 不引入的话 应该不行的吧-->
 <!-- <style type="text/css" scoped>-->
 <style lang="less" scoped>
+.hot-img{
+    margin-left: 20px;
+}
     /*less import */
     @import "@/assets/style.less";
 
@@ -61,7 +64,8 @@
     .hot-pic {
         width: 55px;
         border-radius: 25%;
-        margin-left: 30px;
+        // margin-left: 30px;
+        margin-left: 10px;
     }
 
     .hot-content {
@@ -263,6 +267,7 @@
 
     .hot-box {
 
+// margin-left: 20px;
         background-color: white;
         /*padding-bottom: 10px;*/
         width: 100%;

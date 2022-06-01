@@ -102,6 +102,7 @@
         /*height: 3rem;*/
         height: 2.6rem;
         border-radius: 1.3rem;
+        /* border-radius: 20%; */
         background: #717670;
         /*border-radius: 100px;*/
         /*border-radius: 50px;*/

@@ -5,13 +5,15 @@
 <!--  </nav>-->
   <router-view/>
 
-  <van-tabbar route>
+  <van-tabbar class="sticky-bottom " route>
       <van-tabbar-item to="/zhihu" icon="home-o">首页</van-tabbar-item>
 <!--      <van-tabbar-item to="/" icon="home-o">首页</van-tabbar-item>-->
-      <van-tabbar-item to="/cart" icon="shopping-cart-o">购物车</van-tabbar-item>
-<!--      <van-tabbar-item to="/" icon="friends-o">加</van-tabbar-item>-->
+ <!-- <van-tabbar-item to="/cart" icon="shopping-cart-o">购物车</van-tabbar-item> -->
+      <van-tabbar-item to="/cart" icon="shopping-cart-o">动态</van-tabbar-item>
+     <van-tabbar-item to="/" icon="friends-o">加</van-tabbar-item>
 
-      <van-tabbar-item to="/zhihu" icon="friends-o">知乎</van-tabbar-item>
+      <!-- <van-tabbar-item to="/zhihu" icon="friends-o">知乎</van-tabbar-item> -->
+       <!-- <van-tabbar-item to="/zhihu" icon="friends-o">知乎</van-tabbar-item> -->
       <van-tabbar-item to="/" >
 <!--          icon="friends-o"-->
 <!--          会员-->
@@ -59,7 +61,12 @@
 <!--},-->
 
 <style lang="scss">
-
+.sticky-bottom {
+    // background: deeppink;
+    position: sticky;
+    // top: 0;
+      bottom: 0;
+}
 
     html {
         font-size: 16px;

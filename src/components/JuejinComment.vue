@@ -83,6 +83,7 @@
                 if (el.contains(e.target)) {
                     return false;
                 }
+                // 只有不是本身 才会响应事件
                 // 判断指令中是否绑定了函数
                 if (binding.expression) {
                     // 如果绑定了函数 则调用那个函数，此处binding.value就是handleClose方法

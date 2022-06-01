@@ -225,6 +225,7 @@ export default {
   /*padding-left: 30px;*/
   /*padding-right: 10px;*/
   margin: 0 auto;
+  margin-left: 20px;
   /*里面的全部 居中*/
 }
 
