@@ -1,7 +1,8 @@
 <template>
 <div class="flex-col page">
     <div class="flex-col">
-        <div class="flex-row equal-division">
+        <!-- flex-row  -->
+        <div class="equal-division two-item">
             <div class="equal-division-item justify-center carefully-chosen">
                 <div class="left-section ">
                     <i class="chart grid-item-book icon iconfont icon-ribao"></i>
@@ -9,7 +10,8 @@
 
                 <div class="right-section-carefully-chosen">日报精选</div>
             </div>
-            <div class="equal-division-item justify-center section_2">
+            <!-- section_2 -->
+            <div class="equal-division-item justify-center in-must-watch ">
                 <div class="left-section">
                     <i class="chart grid-item-book icon iconfont icon-thumbup"></i>
                 </div>
@@ -27,9 +29,12 @@
 <!--                    新-->
 <!--                </div>-->
                 </div>
+                <div class=" hot-point-line-text">
                 国务院表示要足量发放
+                </div>
             </div>
-            <hr>
+            <!-- <hr> -->
+            <!-- <div class="line"></div> -->
 <!--            <div class="top-10">-->
 <!--                <ul>-->
 <!--                    <li><a>测试用-青岛XX公司01</a></li>-->
@@ -65,14 +70,17 @@
 <!--                </div>-->
 <!--                <div class="section_8"></div>-->
 <!--            </div>-->
+            <!-- <HotItem :hotItem="{}"></HotItem> -->
+             <!-- <HotItem :key="hotItem.id" v-for="hotItem in hotList"  :hotItem="hotItem"></HotItem> -->
+              <HotItem :key="hotItem.id" v-for="hotItem in hotList"  :hotItem="hotItem"></HotItem>
+             <!-- <HotItem :hotItem="hotItem"></HotItem>
             <HotItem></HotItem>
             <HotItem></HotItem>
             <HotItem></HotItem>
             <HotItem></HotItem>
             <HotItem></HotItem>
             <HotItem></HotItem>
-            <HotItem></HotItem>
-            <HotItem></HotItem>
+            <HotItem></HotItem> -->
 
         </div>
     </div>
@@ -84,6 +92,7 @@
 
 <script>
     import HotItem from "@/components/HotItem.vue"
+    import ObjUtil from "@/utils/ObjUtil"
     // import HotItem from "@/components/Me.vue"
     export default {
         name:"hot-list",
@@ -91,13 +100,52 @@
             HotItem,
         },
         data() {
-            return { listVHC6CKGW: [null, null, null] };
+            let hotList=[]
+            let hotItem= {
+                    id:1,
+             
+               content: `接下来说如何改变大小？
+                直接在.icon里面添加一个样式font-size就行了
+                改变svg的颜色？
+                svg是通过path里面的fill来改变颜色的，如果这个图标本身是没有颜色的，那么在.icon这个类里面把fill:red,就行了，但是如果这个图标原本就是有颜色的，那么这么改就起不到作用了，就要改iconfont.js里面的path，它是一个个对应下来的，只要改了fill里面的颜色，那么图标的颜色就对应的改了
+
+                ————————————————
+                版权声明：本文为CSDN博主「cjq4218」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+                原文链接：https://blog.csdn.net/qq_36641107/article/details/79433016`,
+      number: 1,
+      hot_num: "111万",
+      tag: "品牌湛轩",
+      img:"https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/623ac70e5a7e3f03102b5e76/623ac932154114001109113e/16480204516219340275.png"
+            }
+            // ObjUtil
+            for(let i=0;i<6;i++){
+                let  hotItemClone={}
+            //   let  hotItemClone= ObjUtil.copy(hotItem,hotItemClone)
+              hotItemClone= ObjUtil.copy(hotItem,hotItemClone)
+            //   let hotItemClone=  hotItem.clone()
+              hotItemClone.id=i
+                hotList.push(hotItemClone)
+            }
+            return { listVHC6CKGW: [null, null, null],
+            hotItem:{
+                
+            },
+            hotList:hotList
+             };
         },
     };
 </script>
 
-<style>
+<style scoped>
 
+.hot-point-line-text{
+    /* margin-top: 1px; */
+     margin-top: 2px;
+}
+.hot-point-line{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
     .new-circle{
         border-radius: 50%;
         border: 2px;
@@ -163,18 +211,23 @@
     /*                                   原文链接：https://blog.csdn.net/qq_37135944/article/details/84323542*/
 
     .equal-division-item {
-        flex: 1 1 9.94rem;
+        /* flex: 1 1 9.94rem; */
         /*padding-top: 1rem;*/
         /*padding-top: 0.5rem;*/
         padding-top: 0.8rem;
-        padding-left: 1rem;
+        /* padding-left: 1rem; */
+        /* padding-left: 20px; */
         /*padding: 0.31rem 1.63rem 0.5rem;*/
         /*background-color: rgb(196, 196, 196);*/
         background-color: #C7F5EA;
         /*height: 1.81rem;*/
         height: 2.81rem;
+        /* width: 200px; */
+         width: 150px;
     }
     .left-section {
+        margin-top: 2px;
+        /* margin-top: 4px; */
         /*background-color: rgb(187, 46, 46);*/
         width: 1.06rem;
         height: 1rem;
@@ -193,14 +246,20 @@
         background-color:  #D4F2FC;
     }
     .right-section-carefully-chosen {
+        vertical-align: top;
         color: #3662A1;
-        margin-left: 0.69rem;
+        /* margin-left: 0.69rem; */
+         /* margin-left: 20px; */
+          margin-left: 10px; 
         /*color: #4d46ff;*/
         /*color: #D4F2FC;*/
         /*background-color: rgb(105, 27, 27);*/
         /*background-color:  #D4F2FC;*/
         width: 4.25rem;
-        height: 0.94rem;
+        /* height: 0.94rem; */
+        /* height: 300px; */
+        /* height: 40px; */
+           height: 20px;
     }
 
     .page {
@@ -216,10 +275,25 @@
         height: 6.56rem;
     }
     .equal-division {
-        margin-right: 1rem;
+        /* 这里删除没有用处吗 他的 margin 还是有啊 */
+        /* margin-right: 1rem; */
     }
     .group-list {
         margin-top: 0.38rem;
+    }
+    .in-must-watch{
+          /* margin-left: 300px; */
+           /* margin-left: 100px; */
+             /* justify-content: stretch;   */
+             /* margin-left: 20px; */
+              /* margin-left: 30px; */
+                /* margin-left: 40px; */
+                    /* margin-left: 60px; */
+                       /* margin-left: 80px; */
+                         /* margin-left: 70px; */
+                            /* margin-left: 65px; */
+                               /* margin-left: 50px; */
+                                 margin-left: 20px;
     }
     .section_2 {
         margin-left: 0.75rem;
@@ -282,5 +356,15 @@
         border-radius: 0.25rem;
         width: 4.44rem;
         height: 4.19rem;
+    }
+
+    .two-item{
+        display: flex;
+        /* flex-direction: be; */
+          justify-content: space-between;
+           /* justify-content:  space-around; */
+           /* justify-content: space-evenly; */
+           /* justify-content: stretch;   */
+
     }
 </style>

@@ -13,7 +13,10 @@ const routes: Array<RouteRecordRaw> = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+      meta: {
+          index: 2,
+      },
   },
   {
     path: '/zhihu',
@@ -21,12 +24,18 @@ const routes: Array<RouteRecordRaw> = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/zhihu/index.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/zhihu/index.vue'),
+      meta: {
+          index: 0,
+      },
   },
   {
     path: '/MeZhihuNamed',
     name: 'MeZhihuNamed',
-    component: () => import('../views/MeZhihuNamed.vue')
+    component: () => import('../views/MeZhihuNamed.vue'),
+      meta: {
+          index: 1,
+      },
   },
     {
         path: '/MeWrapper',
@@ -52,7 +61,10 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/MainArticle',
         name: 'MainArticle',
-        component: () => import('../views/main_article.vue')
+        component: () => import('../views/main_article.vue'),
+        meta: {
+            index: 1,
+        },
     },
     {
         path: '/MessageView',
@@ -64,7 +76,7 @@ const routes: Array<RouteRecordRaw> = [
       name: 'MeHome',
       component: () => import('../views/MeHome.vue')
   },
-    
+
   // {
   //   path: '/github',
   //   name: 'github',

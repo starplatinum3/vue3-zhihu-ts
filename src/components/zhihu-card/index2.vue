@@ -4,7 +4,7 @@
         <div class="content-inside-mid-box">
             <!--            <div class="content-mid">-->
             <!-- <h4 class="title">web前端面试题目题目</h4> -->
-            <h4 class="title">{{ article.title }}</h4>
+            <h4 class="title">{{ title }}</h4>
             <div class="mid-box">
                 <div class="mid-left">
                     <div class="row nickname-row">
@@ -20,10 +20,9 @@
                         <!-- <span class="nickname">昵称</span>
                                     <span class="personal-signature">昵称</span> -->
                         <!-- <span class="nickname">张扛扛</span> -->
-                        <span class="nickname">{{article.nickname }}</span>
+                        <span class="nickname">{{ nickname }}</span>
                         <!-- <span class="personal-signature">有点皮</span> -->
-<!--                        <span class="personal-signature">{{ personal_signature }}</span>-->
-                        <span class="personal-signature">{{article.personal_signature }}</span>
+                        <span class="personal-signature">{{ personal_signature }}</span>
                     </div>
                     <!--            <img class="avatar-img" src="@/assets/miku.jpg" alt="miku"/>-->
 
@@ -38,8 +37,7 @@
 
                     </div> -->
 
-<!--                    <div class="content-article">{{ content_article }}</div>-->
-                    <div class="content-article">{{ article.content_article }}</div>
+                    <div class="content-article">{{ content_article }}</div>
                 </div>
                 <div class="mid-right">
                     <!--          <img class="mid-right-img" src="@/assets/miku.jpg" alt="miku" />-->
@@ -80,19 +78,12 @@
             console.log("this.article");
             console.log(this.article);
          let oo=  toRefs(this.article)
-          // {
-          //   "id": 1,
-          //         "title": "web前端面试题目题目",
-          //         "nickname": "张扛扛",
-          //         "personal_signature": "有点皮",
-          //         "content_article": "Vant\n            轻量、可靠的移动端 Vue 组件库\n\n            特性\n            50+ 个组件\n            90% 单元测试覆盖率\n            完善的中英文文档和示例"
-          // }
           console.log("oo")
           console.log(oo)
         // ...toRefs(this.article),
         //   ..oo,
             return {
-              // ...toRefs(this.article),
+              ...toRefs(this.article),
             };
         },
         name: "GithubHome",

@@ -1,5 +1,6 @@
 <template>
-    <div class="my-video my-video-body" :style="VideoItemHeightStyle">
+<!-- :style="VideoItemHeightStyle" -->
+    <div class="my-video my-video-body" >
         <video
 
                 class="video" :src="VideoItem.Video.videoPath"
@@ -110,9 +111,11 @@
             // let  VideoItem.Video.videoPath
             let VideoItem = {
                 Video: {
+                    // 视频可以删掉了。。
                     // videoPath: require("@/assets/blackBro.flv"),
                     // videoPath: require("@/assets/youhou.mp4"),
-                    videoPath: "http://starplatinumora.top/images/video/top10%E7%9C%81%E7%8E%B0%E6%9C%89%E7%A1%AE%E8%AF%8A%E7%97%85%E4%BE%8B%E5%AF%B9%E6%AF%94.mp4",
+                    videoPath: "https://starplatinumora.top/images/video/top10%E7%9C%81%E7%8E%B0%E6%9C%89%E7%A1%AE%E8%AF%8A%E7%97%85%E4%BE%8B%E5%AF%B9%E6%AF%94.mp4",
+                    // videoPath: "http://starplatinumora.top/images/video/top10%E7%9C%81%E7%8E%B0%E6%9C%89%E7%A1%AE%E8%AF%8A%E7%97%85%E4%BE%8B%E5%AF%B9%E6%AF%94.mp4",
                     // videoPath:"@/assets/blackBro.flv",
                     // userAvatar:"../assets/miku.jpg"
                     // userAvatar:"@/assets/miku.jpg"
@@ -120,7 +123,8 @@
                     userAvatar: require("@/assets/miku.jpg"),
                     userNickname: "java",
                     videoDesc: "videoDesc",
-                    videoCover: "http://starplatinumora.top/images/1541000669139474.jpg",
+                    // videoCover: "http://starplatinumora.top/images/1541000669139474.jpg",
+                    videoCover: "https://starplatinumora.top/images/1541000669139474.jpg",
                     videoId: "1",
                 },
                 WSLCNum: {
@@ -274,15 +278,26 @@
 
     .my-video-body
         line-height: 1
+        // https://blog.csdn.net/qq_43654065/article/details/110231984
         font-family: arial, 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', sans-serif, 'Droid Sans Fallback'
         user-select: none
         -webkit-tap-highlight-color: transparent
+        // 点击链接 透明
+        // -webkit-tap-highlight-color 是一个非标准的 CSS 属性，用于设置在点击链接时显示在链接
+        // 上的突出显示的颜色。突出显示向用户指示他们的点击正在被成功识别，并指示他们正在点击哪个元
         background: $color-background
         color: $color-text
         width: 100%
-        /*height 100%*/
+        // height 100%
         /*height 80%*/
-        height 200px
+        // height 200px
+        // height 200px
+        // height 600px
+        // height 550px
+        // height 560px
+        // height 570px
+        // height 590px
+        height 610px
         display: flex
 
 

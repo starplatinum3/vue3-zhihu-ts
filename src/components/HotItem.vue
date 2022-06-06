@@ -1,30 +1,101 @@
 <template>
-    <div class="flex-col main-box">
-        <div class="flex-row group-hot-list">
-            <div class="number">1</div>
-            <div class="content-hot-list line-limit-length">接下来说如何改变大小？
+  <div class="flex-col main-box">
+    <div class="flex-row group-hot-list">
+      <!-- <div class="number">1</div> -->
+      <div class="number">{{ number }}</div>
+      <!-- <div class="content-hot-list line-limit-length">接下来说如何改变大小？
                 直接在.icon里面添加一个样式font-size就行了
                 改变svg的颜色？
                 svg是通过path里面的fill来改变颜色的，如果这个图标本身是没有颜色的，那么在.icon这个类里面把fill:red,就行了，但是如果这个图标原本就是有颜色的，那么这么改就起不到作用了，就要改iconfont.js里面的path，它是一个个对应下来的，只要改了fill里面的颜色，那么图标的颜色就对应的改了
 
                 ————————————————
                 版权声明：本文为CSDN博主「cjq4218」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-                原文链接：https://blog.csdn.net/qq_36641107/article/details/79433016</div>
-            <img
-                    src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/623ac70e5a7e3f03102b5e76/623ac932154114001109113e/16480204516219340275.png"
-                    class="image"
-            />
-        </div>
-        <div class="flex-row">
-        <div class="hot-num">111万热度</div>
-        <div class="tag-box">品牌湛轩</div>
-        </div>
+                原文链接：https://blog.csdn.net/qq_36641107/article/details/79433016</div> -->
+      <div class="content-hot-list line-limit-length">{{ content }}</div>
+      <!-- <img
+     
+        src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/623ac70e5a7e3f03102b5e76/623ac932154114001109113e/16480204516219340275.png"
+        class="image"
+      /> -->
+      <img
+     
+        :src="img"
+        class="image"
+      />
     </div>
+    <div class="flex-row">
+      <!-- <div class="hot-num">111万热度</div> -->
+      <div class="hot-num">{{ hot_num }}热度</div>
+      <!-- <div class="tag-box">品牌湛轩</div> -->
+      <div class="tag-box">{{ tag }}</div>
+    </div>
+  </div>
 </template>
 
-<script></script>
+<script>
+// content
 
-<style>
+import { ref } from "vue";
+
+import { defineComponent } from "vue";
+
+import ZhihuCard from "@/components/zhihu-card/index.vue";
+import HotBox from "@/components/hot-box/index.vue";
+import SlideUpText from "@/components/SlideUpText.vue";
+
+// import { useRouter } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
+
+export default defineComponent({
+  name: "HomeView",
+  components: {
+    // ZhihuCard,
+    // HotBox,
+    // SlideUpText,
+  },
+props: {
+    /** Question object containing questionData, possible answers, and user answer information. */
+    hotItem: {
+      required: true,
+      type: Object,
+    },
+  },
+  setup(props) {
+    const router = useRouter();
+    const active = ref(0);
+    const value = ref("");
+    console.log("props");
+  console.log(props);
+  console.log("hotItem");
+    // console.log(this.hotItem);
+    console.log(props.hotItem);
+    console.log("setup");
+    const articleClicked = () => {
+      console.log("articleClicked");
+      router.push("/MainArticle");
+    };
+    return {
+      value,
+      active,
+      articleClicked,
+      content: `接下来说如何改变大小？
+                直接在.icon里面添加一个样式font-size就行了
+                改变svg的颜色？
+                svg是通过path里面的fill来改变颜色的，如果这个图标本身是没有颜色的，那么在.icon这个类里面把fill:red,就行了，但是如果这个图标原本就是有颜色的，那么这么改就起不到作用了，就要改iconfont.js里面的path，它是一个个对应下来的，只要改了fill里面的颜色，那么图标的颜色就对应的改了
+
+                ————————————————
+                版权声明：本文为CSDN博主「cjq4218」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+                原文链接：https://blog.csdn.net/qq_36641107/article/details/79433016`,
+      number: 1,
+      hot_num: "111万",
+      tag: "品牌湛轩",
+      img:"https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/623ac70e5a7e3f03102b5e76/623ac932154114001109113e/16480204516219340275.png"
+    };
+  },
+});
+</script>
+
+<style lang="less" scoped>
 
     .line-limit-length {
         overflow: hidden;
@@ -74,6 +145,7 @@
         height: 6.56rem;
     }
     .equal-division {
+        /* 会用这里的margin  */
         margin-right: 1rem;
     }
     .group_1 {
@@ -121,15 +193,18 @@
         /*border-radius: 10px;*/
         border-radius: 3px;
         color: #999999;
-        font-size: 50%;
+        // font-size: 50%;
+        font-size: @little_font;
         margin-left: 1.25rem;
         /*background-color: rgb(196, 196, 196);*/
         width: 5.69rem;
         height: 1rem;
     }
+    @little_font:10px;
     .hot-num {
         color: #999999;
-        font-size: 50%;
+        /* font-size: 50%; */
+        font-size: 10px;
         margin-left: 1.25rem;
         /*background-color: rgb(196, 196, 196);*/
         width: 5.69rem;

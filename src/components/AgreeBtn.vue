@@ -6,7 +6,7 @@
             <div class="left-text">
                 <svg t="1649599246174" class="icon agree-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3940" width="128" height="128"><path d="M573.056 272l308.8 404.608A76.8 76.8 0 0 1 820.736 800H203.232a76.8 76.8 0 0 1-61.056-123.392L450.976 272a76.8 76.8 0 0 1 122.08 0z" p-id="3941"></path></svg>
 
-                赞同 100</div>
+                赞同 {{agree_cnt}}</div>
         </div>
 <!--        css 竖线-->
 <!--        <hr/>-->
@@ -21,7 +21,9 @@
 <script>
     export default {
         data() {
-            return {};
+            return {
+                agree_cnt:100
+            };
         },
     };
 </script>

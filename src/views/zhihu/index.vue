@@ -297,6 +297,8 @@
         /*width: 183px;*/
         width: 123px;
         height: 22px;
+        // 这里改了没用
+        //  height: 52px;
         margin-left: 30px;
     }
 
